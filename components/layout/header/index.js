@@ -8,7 +8,7 @@ import BurgerButton from './burger-button';
 import BasketButton from './basket-button';
 import { Outer, Nav, Logo, NavActions, NavList, NavListItem } from './styles';
 
-const Header = ({ simple, menuItems }) => {
+const Header = ({ simple }) => {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
@@ -22,13 +22,13 @@ const Header = ({ simple, menuItems }) => {
       </Link>
       <Nav open={navOpen}>
         <NavList>
-          {menuItems.map(category => (
+          {category => (
             <NavListItem key={category.path}>
               <Link as={category.path} href={`/${category.type}`}>
                 <a onClick={() => setNavOpen(false)}>{category.name}</a>
               </Link>
             </NavListItem>
-          ))}
+          )}
         </NavList>
       </Nav>
       <NavActions open={navOpen}>

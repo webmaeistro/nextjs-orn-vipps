@@ -44,11 +44,13 @@ const Layout = ({ children, title, description, simple, loading }) => {
   const [queryResult] = useQuery({
     query: `
       query MENU_AND_TENANT($language: String!) {
-        menu: catalogue(language: $language, path: "/") {
+        menu: catalogue(language: "en", path: "/") {
+          ...item
+          ...product
+      
           children {
-            type
-            name
-            path
+            ...item
+            ...product
           }
         }
     
@@ -77,9 +79,7 @@ const Layout = ({ children, title, description, simple, loading }) => {
     );
   }
 
-  const {
-    data: { Catalogue, tenant }
-  } = queryResult;
+  const { data: menu } = queryResult;
 
   return (
     <>
@@ -93,11 +93,11 @@ const Layout = ({ children, title, description, simple, loading }) => {
         <link rel="canonical" href={`https://your.domain${router.asPath}`} />
       </Head>
       <GlobalStyle />
-      <SettingsProvider language={language} currency={tenant.defaults.currency}>
+      <SettingsProvider language={language}>
         <IntlProvider locale={language}>
           <AuthGate>
             <CrystallizeLayout right={simple ? null : Aside}>
-              <Header simple={simple} menuItems={Catalogue.children} />
+              <Header simple={simple} menuItems={menu} />
               <Main>{loading ? <Loader /> : children}</Main>
             </CrystallizeLayout>
           </AuthGate>

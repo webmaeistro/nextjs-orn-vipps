@@ -2,13 +2,9 @@
   "version": 2,
   "env": {
     "CRYSTALLIZE_API_URL": "https://api.crystallize.com",
-    "CRYSTALLIZE_TENANT_ID": "teddy-bear-shop",
-    "MY_CRYSTALLIZE_SECRET_TOKEN_ID": "@crystallize-access-token-id",
-    "MY_CRYSTALLIZE_SECRET_TOKEN": "@crystallize-access-token-secret",
-    "SECRET": "secret",
-    "STRIPE_SECRET_KEY": "@stripe-secret-key",
-    "STRIPE_PUBLISHABLE_KEY": "@stripe-publishable-key",
-    "KLARNA_USERNAME": "@klarna-username",
-    "KLARNA_PASSWORD": "@klarna-password"
+    "CRYSTALLIZE_TENANT_ID": "orn-forlagt",
+    "MY_CRYSTALLIZE_SECRET_TOKEN_ID": "95f29e0c6ec01528bb9f",
+    "MY_CRYSTALLIZE_SECRET_TOKEN": "49cd2961158e7cbb85e680262b9db991940b17af",
+    "SECRET": "secret"
   }
 }
