@@ -78,7 +78,7 @@ const Layout = ({ children, title, description, simple, loading }) => {
   }
 
   const {
-    data: { menu, tenant }
+    data: { Catalogue, tenant }
   } = queryResult;
 
   return (
@@ -97,7 +97,7 @@ const Layout = ({ children, title, description, simple, loading }) => {
         <IntlProvider locale={language}>
           <AuthGate>
             <CrystallizeLayout right={simple ? null : Aside}>
-              <Header simple={simple} menuItems={menu.children} />
+              <Header simple={simple} menuItems={Catalogue.children} />
               <Main>{loading ? <Loader /> : children}</Main>
             </CrystallizeLayout>
           </AuthGate>

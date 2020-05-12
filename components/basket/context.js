@@ -196,6 +196,7 @@ export class BasketProvider extends React.Component {
   pulsateItemInBasket = animItem => {
     const parsedItem = this.parseBasketItem(animItem);
 
+    // eslint-disable-next-line no-async-promise-executor
     return new Promise(async mainResolve => {
       const updateStateItem = (stateItem, animate) =>
         new Promise(resolve => {

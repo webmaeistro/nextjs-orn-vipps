@@ -35,7 +35,7 @@ const orderToVippsBody = (
     merchantInfo: {
       merchantSerialNumber: VIPPS_MERCHANT_SERIAL,
       callbackPrefix: `${NGROK_URL}/api/order-persistence/vipps`,
-      //   shippingDetailsPrefix: NGROK_URL,
+      shippingDetailsPrefix: NGROK_URL,
       consentRemovalPrefix: NGROK_URL,
       paymentType: 'eComm Express Payment',
       fallBack: NGROK_URL,
@@ -64,7 +64,6 @@ const orderToVippsBody = (
 export default async (req, res) => {
   try {
     const { personalDetails, lineItems, currency } = req.body;
-    const { metadata } = req.body;
     const mutationBody = normallizer(
       {},
       { lineItems, currency, personalDetails }
@@ -72,11 +71,11 @@ export default async (req, res) => {
 
     const { data } = await persistCrystallizeOrder(mutationBody);
 
-    // await vippsApiCall({
-    //     method: 'POST',
-    //     uri: '/ecomm/v2/payments',
-    //     body: orderToVippsBody(req.body, lineItems)
-    //   });
+    await vippsApiCall({
+      method: 'POST',
+      uri: '/ecomm/v2/payments',
+      body: orderToVippsBody(req.body, lineItems)
+    });
     console.log(data.orders.create.id);
     return res.send({
       body: orderToVippsBody(

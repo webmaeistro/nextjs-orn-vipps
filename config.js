@@ -2,7 +2,7 @@
 const {
   NODE_ENV = 'development',
   COUNTRY_CODE = 'NO',
-  CRYSTALLIZE_TENANT_ID = 'teddy-bear-shop',
+  CRYSTALLIZE_TENANT_ID = 'orn-forlag',
   CRYSTALLIZE_API_URL = 'https://api.crystallize.com',
   CRYSTALLIZE_CORE_API_URL = 'https://pim.crystallize.com/graph/core',
   STRIPE_PUBLISHABLE_KEY,
@@ -10,11 +10,11 @@ const {
   MY_CRYSTALLIZE_SECRET_TOKEN,
   MY_CRYSTALLIZE_SECRET_TOKEN_ID,
   SENDGRID_API_KEY,
-  TERMS_URI = 'https://myeshopterms.com',
-  CHECKOUT_URI = 'https://myshopcheckout.com',
+  TERMS_URI = 'https://localhost:3000/terms',
+  CHECKOUT_URI = 'https://localhost:3000/checkout',
   KLARNA_USERNAME,
   KLARNA_PASSWORD,
-  NGROK_URL,
+  NGROK_URL = 'https://ornforlag.no',
   KLARNA_API_URL = 'https://api.playground.klarna.com',
 
   VIPPS_API_URL = 'https://api.playground.klarna.com',
