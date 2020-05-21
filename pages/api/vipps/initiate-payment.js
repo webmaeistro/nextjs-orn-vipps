@@ -47,14 +47,14 @@ const orderToVippsBody = (
     transaction: {
       orderId: crystallizeOrderId,
       amount: totalCartAmount,
-      transactionText: 'Crystallize Boilerplate Test Transaction',
+      transactionText: 'Bok transaksjon hos Ørn forlag',
       staticShippingDetails: [
         {
           isDefault: 'Y',
           priority: 0,
-          shippingCost: 0,
-          shippingMethod: 'Free delivery',
-          shippingMethodId: 'free-delivery'
+          shippingCost: 59,
+          shippingMethod: 'Posten Servicepakke',
+          shippingMethodId: 'Posten-servicepakke'
         }
       ]
     }

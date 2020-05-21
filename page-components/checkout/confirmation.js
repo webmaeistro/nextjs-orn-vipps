@@ -78,15 +78,15 @@ function Confirmation() {
   return (
     <Outer>
       <CustomHeader>
-        <H1>Order Summary</H1>
+        <H1>Bestillings oppsummering</H1>
         <p>
-          Your order (<strong>#{orderId}</strong>) has been confirmed. A copy of
-          your order has been sent to <strong>{email}</strong>.
+          Din bestilling (<strong>#{orderId}</strong>) har blitt behandlet. En
+          kopi av ordren har blitt sendt til epost <strong>{email}</strong>.
         </p>
         <Line />
         <BillingDetails order={order} />
         <Line />
-        <H3>Order Items</H3>
+        <H3>Ordre artikkler</H3>
         <OrderItems items={items} />
       </CustomHeader>
     </Outer>

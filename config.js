@@ -5,19 +5,13 @@ const {
   CRYSTALLIZE_TENANT_ID = 'orn-forlag',
   CRYSTALLIZE_API_URL = 'https://api.crystallize.com',
   CRYSTALLIZE_CORE_API_URL = 'https://pim.crystallize.com/graph/core',
-  STRIPE_PUBLISHABLE_KEY,
-  SUCCESS_PAYMENT_STRIPE_WEBHOOK_TOKEN,
-  MY_CRYSTALLIZE_SECRET_TOKEN,
-  MY_CRYSTALLIZE_SECRET_TOKEN_ID,
-  SENDGRID_API_KEY,
-  TERMS_URI = 'https://localhost:3000/terms',
-  CHECKOUT_URI = 'https://localhost:3000/checkout',
-  KLARNA_USERNAME,
-  KLARNA_PASSWORD,
+  MY_CRYSTALLIZE_SECRET_TOKEN = '49cd2961158e7cbb85e680262b9db991940b17af',
+  MY_CRYSTALLIZE_SECRET_TOKEN_ID = '95f29e0c6ec01528bb9f',
+  SENDGRID_API_KEY = '5eb311d3ba5038001c018b9f',
+  VIPPS_API_URL = 'https://apitest.vipps.no',
+  TERMS_URI = 'http://localhost:3000/terms',
+  CHECKOUT_URI = 'http://localhost:3000/checkout',
   NGROK_URL = 'https://ornforlag.no',
-  KLARNA_API_URL = 'https://api.playground.klarna.com',
-
-  VIPPS_API_URL = 'https://api.playground.klarna.com',
   HOST_URL = 'http://localhost:3000'
 } = process.env;
 
@@ -31,16 +25,13 @@ global.__crystallizeConfig = {
   ORDER_API_URL: `${CRYSTALLIZE_API_URL}/${CRYSTALLIZE_TENANT_ID}/orders`,
   CRYSTALLIZE_CORE_API_URL,
   SENDGRID_API_KEY,
-  SUCCESS_PAYMENT_STRIPE_WEBHOOK_TOKEN,
   MY_CRYSTALLIZE_SECRET_TOKEN,
   MY_CRYSTALLIZE_SECRET_TOKEN_ID,
-  STRIPE_PUBLISHABLE_KEY,
+
   DEV,
   TERMS_URI,
   CHECKOUT_URI,
-  KLARNA_API_URL,
-  KLARNA_USERNAME,
-  KLARNA_PASSWORD,
+
   NGROK_URL,
   VIPPS_API_URL,
   HOST_URL

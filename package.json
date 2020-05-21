@@ -1,12 +1,12 @@
 {
-  "name": "crystallize-nextjs-boilerplate",
+  "name": "crystallize-nextjs-boilerplate-vipps",
   "version": "4.1.0",
   "license": "MIT",
   "engines": {
     "node": ">=10.10"
   },
   "repository": {
-    "url": "git@github.com:CrystallizeAPI/crystallize-nextjs-boilerplate.git",
+    "url": "git@github.com:webmaeistro/crystallize-nextjs-boilerplate.git",
     "type": "git"
   },
   "scripts": {

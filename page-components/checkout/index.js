@@ -21,7 +21,7 @@ const Checkout = () => {
   const { currency } = settings;
 
   if (!items.length) {
-    return <Outer>Basket is empty</Outer>;
+    return <Outer>Kurven er tom</Outer>;
   }
 
   return (

@@ -39,7 +39,7 @@ export default function FrontPage() {
       ${itemFragment}
       ${productFragment}
     `,
-    variables: { id: '5dc3fe4d43b90109229ee27b', language: 'en' }
+    variables: { id: '5ea85ce153d66b001c00bef1', language: 'en' }
   });
 
   if (fetching) {
@@ -56,8 +56,11 @@ export default function FrontPage() {
     <Layout title="Home">
       <Outer>
         <Header>
-          <H1>Oh hi there!</H1>
-          <p>Cool of you to join us.</p>
+          <H1>Ørn forlag</H1>
+          <p>
+            Brer sine vide vinger over sentrale deler av norsk natur, og bærer
+            kunnskap ut til folket gjennom fysiske såvel som digitale medier.
+          </p>
         </Header>
 
         {grid && (
