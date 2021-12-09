@@ -52,7 +52,7 @@
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.15",
     "mjml": "^4.4.1",
-    "next": "^9.3.2",
+    "next": "^11.1.3",
     "next-urql": "^0.2.5",
     "polished": "^3.4.4",
     "prop-types": "^15.7.2",
